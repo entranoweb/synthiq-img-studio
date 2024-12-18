@@ -1,18 +1,13 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { AuthProvider } from '@/components/AuthProvider'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  metadataBase: new URL('https://postgres-drizzle.vercel.app'),
-  title: 'Vercel Postgres Demo with Drizzle',
-  description:
-    'A simple Next.js app with Vercel Postgres as the database and Drizzle as the ORM',
+  title: 'AI Image Studio',
+  description: 'Generate and manage AI images',
 }
-
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 export default function RootLayout({
   children,
@@ -21,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.variable}>{children}</body>
+      <body className={inter.className}>
+        <AuthProvider>
+          {children}
+        </AuthProvider>
+      </body>
     </html>
   )
 }

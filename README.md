@@ -1,49 +1,77 @@
 ---
-name: Vercel Postgres + Drizzle Next.js Starter
-slug: postgres-drizzle
-description: Simple Next.js template that uses Vercel Postgres as the database and Drizzle as the ORM.
+name: Synthiq Image Studio
+slug: synthiq-img-studio
+description: A modern web application for AI image generation and management. Built with Next.js, featuring a sleek UI and powerful image generation capabilities.
 framework: Next.js
-useCase: Starter
+useCase: Web Application
 css: Tailwind
 database: Vercel Postgres
-deployUrl: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fstorage%2Fpostgres-drizzle&project-name=postgres-drizzle&repository-name=postgres-drizzle&demo-title=Vercel%20Postgres%20%2B%20Drizzle%20Next.js%20Starter&demo-description=Simple%20Next.js%20template%20that%20uses%20Vercel%20Postgres%20as%20the%20database%20and%20Drizzle%20as%20the%20ORM.&demo-url=https%3A%2F%2Fpostgres-drizzle.vercel.app%2F&demo-image=https%3A%2F%2Fpostgres-drizzle.vercel.app%2Fopengraph-image.png&stores=%5B%7B"type"%3A"postgres"%7D%5D
-demoUrl: https://postgres-drizzle.vercel.app/
+deployUrl: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2Fsynthiq-img-studio&project-name=synthiq-img-studio&repository-name=synthiq-img-studio&demo-title=Synthiq%20Image%20Studio&demo-description=A%20modern%20web%20application%20for%20AI%20image%20generation%20and%20management.&demo-url=https%3A%2F%2Fsynthiq-img-studio.vercel.app%2F&demo-image=https%3A%2F%2Fsynthiq-img-studio.vercel.app%2Fopengraph-image.png&stores=%5B%7B"type"%3A"postgres"%7D%5D
+demoUrl: https://synthiq-img-studio.vercel.app/
 relatedTemplates:
   - postgres-starter
   - postgres-prisma
   - postgres-kysely
 ---
 
-# Vercel Postgres + Drizzle Next.js Starter
+# Synthiq Image Studio
 
-Simple Next.js template that uses [Vercel Postgres](https://vercel.com/postgres) as the database and [Drizzle](https://github.com/drizzle-team/drizzle-orm) as the ORM.
+A modern web application for AI image generation and management. Built with Next.js, featuring a sleek UI and powerful image generation capabilities.
 
-## Demo
+## Features
 
-https://postgres-drizzle.vercel.app/
+- AI-powered image generation
+- Modern, responsive UI with image gallery
+- Full-screen image viewer with navigation
+- Image download functionality
+- User authentication
+- Secure image storage
 
-## How to Use
+## Tech Stack
 
-You can choose from one of the following two methods to use this repository:
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **Database**: Vercel Postgres
+- **ORM**: Drizzle
+- **Authentication**: NextAuth.js
+- **UI Components**: Custom components with Framer Motion
 
-### One-Click Deploy
+## Getting Started
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fstorage%2Fpostgres-drizzle&project-name=postgres-drizzle&repository-name=postgres-drizzle&demo-title=Vercel%20Postgres%20%2B%20Drizzle%20Next.js%20Starter&demo-description=Simple%20Next.js%20template%20that%20uses%20Vercel%20Postgres%20as%20the%20database%20and%20Drizzle%20as%20the%20ORM.&demo-url=https%3A%2F%2Fpostgres-drizzle.vercel.app%2F&demo-image=https%3A%2F%2Fpostgres-drizzle.vercel.app%2Fopengraph-image.png&stores=%5B%7B"type"%3A"postgres"%7D%5D)
-
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
-
+1. Clone the repository:
 ```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/storage/postgres-drizzle
+git clone https://github.com/entranoweb/synthiq-img-studio.git
+cd synthiq-img-studio
 ```
 
-Next, run Next.js in development mode:
+2. Install dependencies:
+```bash
+pnpm install
+```
 
+3. Copy the example environment file:
+```bash
+cp .env.example .env
+```
+
+4. Update the environment variables in `.env` with your credentials
+
+5. Run the development server:
 ```bash
 pnpm dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples) ([Documentation](https://nextjs.org/docs/deployment)).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Environment Variables
+
+The following environment variables are required:
+
+- `DATABASE_URL`: Your Postgres database URL
+- `NEXTAUTH_SECRET`: Secret for NextAuth.js
+- `NEXTAUTH_URL`: Your application URL
+- `OPENAI_API_KEY`: Your OpenAI API key for image generation
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
